@@ -2,7 +2,22 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = []
+
+    hash_table = {}
+
+    for subs in arrays:
+        for num in subs:
+            if num not in hash_table:
+                hash_table[num] = 1
+            else:
+                result.append(num)
+
+    print(result)
+    result = dict.fromkeys(result)
+    print(result)
+    result = list(result)
+    print(result)
 
     return result
 
